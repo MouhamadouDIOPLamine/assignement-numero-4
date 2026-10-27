@@ -1,0 +1,21 @@
+# Dependances
+node_modules/
+
+# Secrets - NE JAMAIS committer les .env (DATABASE_URL, SESSION_SECRET...)
+.env
+.env.local
+.env.*.local
+client/.env
+server/.env
+
+# Builds
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Divers
+.DS_Store
+.vscode/

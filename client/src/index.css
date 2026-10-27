@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* A couple of reusable component classes built with @apply. */
+@layer components {
+  .section-wrap {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+  .btn {
+    @apply inline-block rounded-full bg-primary px-6 py-3 font-semibold text-white transition hover:bg-primary/90;
+  }
+  .btn-outline {
+    @apply inline-block rounded-full border border-primary px-6 py-3 font-semibold text-primary transition hover:bg-primary hover:text-white;
+  }
+}
