@@ -46,10 +46,8 @@ app.use(
     cookie: {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 7, // 7 jours
-      // En prod (front et back sur des domaines differents) il faut
-      // sameSite 'none' + secure true. En local, 'lax' sans secure.
-      sameSite: isProd ? 'none' : 'lax',
-      secure: isProd,
+      sameSite: 'lax',   // ← 'lax' partout, car le proxy Vercel rend tout same-site
+      secure: isProd,    // ← reste true en prod (HTTPS obligatoire)
     },
   }),
 )
